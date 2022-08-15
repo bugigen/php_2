@@ -21,59 +21,61 @@
 
 
 $array = [
-    [
-        'item' => 'product 1',
-        'description' => 'description 1',
-        'price' => 1_000,
-        'currency' => 'RUB',
-        'discount' => 'false',
-        'currency-with-discount' => 999
-    ],
-    [
-        'item' => 'product 2',
-        'description' => 'description 2',
-        'price' => 2_000,
-        'currency' => 'RUB',
-        'discount' => 'true',
-        'currency-with-discount' => 1_999
-    ],
-    [
-        'item' => 'product 1',
-        'description' => 'description 1',
-        'price' => 3_000,
-        'currency' => 'RUB',
-        'discount' => 'false',
-        'currency-with-discount' => 2_999
-    ],
+  [
+    'item' => 'product 1',
+    'description' => 'description 1',
+    'price' => 1000,
+    'currency' => 'RUB',
+    'discount' => 'false',
+    'currency-with-discount' => 999
+  ],
+  [
+    'item' => 'product 2',
+    'description' => 'description 2',
+    'price' => 2000,
+    'currency' => 'RUB',
+    'discount' => 'true',
+    'currency-with-discount' => 1999
+  ],
+  [
+    'item' => 'product 1',
+    'description' => 'description 1',
+    'price' => 3000,
+    'currency' => 'RUB',
+    'discount' => 'false',
+    'currency-with-discount' => 2999
+  ],
 ];
 ?>
 
 <div>
-    <?php foreach ($array as $item) : ?>
-        <?php foreach ($item as $key => $value) : ?>
-            <span>
-                <?= $key ?> :
-                <?= $value ?> -
-                <?= $item[$key] ?> <br>
-            </span>
+  <?php foreach ($array as $item) : ?>
+    <?php foreach ($item as $key => $value) : ?>
+      <span>
+        <?= $key ?> :
+        <?= $value ?> -
+        <?= $item[$key] ?> <br>
+      </span>
 
-        <?php endforeach ?> <br>
-    <?php endforeach ?>
+    <?php endforeach ?> <br>
+  <?php endforeach ?>
 
-    <?php foreach ($array as $item) : ?>
-        <?php foreach ($item as $key => $value) : ?>
-            <table>
-                <thead>
-                    <tr>
-                        <td><?= $key ?></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><?= $value ?></td>
-                    </tr>
-                </tbody>
-            </table>
-        <?php endforeach ?> <br>
-    <?php endforeach ?>
+  <?php foreach ($array as $item) : ?>
+    <?php foreach ($item as $key => $value) : ?>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <?= $key ?>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><?= $value ?></td>
+          </tr>
+        </tbody>
+      </table>
+    <?php endforeach ?> <br>
+  <?php endforeach ?>
 </div>
